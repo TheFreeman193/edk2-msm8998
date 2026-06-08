@@ -13,7 +13,7 @@
 
 [BuildOptions.common]
   # FIXME: msm8998 doesn't support lse instructions, however build fails without it
-  GCC:*_*_AARCH64_CC_FLAGS = -Wno-unused-variable -march=armv8-a+lse -moutline-atomics -mtune=cortex-a73.cortex-a53 -DENABLE_LINUX_SIMPLE_MASS_STORAGE
+  GCC:*_*_AARCH64_CC_FLAGS = -Wno-unused-variable -march=armv8-a+lse -moutline-atomics -mtune=cortex-a73.cortex-a53 -DENABLE_LINUX_SIMPLE_MASS_STORAGE -Wno-error=dangling-pointer
 
 [BuildOptions.common.EDKII.DXE_RUNTIME_DRIVER]
   GCC:*_*_ARM_DLINK_FLAGS = -z common-page-size=0x1000
